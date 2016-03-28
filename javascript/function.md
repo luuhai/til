@@ -1,5 +1,5 @@
-Basic syntax
-============
+Function
+========
 
 ### Difference between methods defined by function x() and var x = function()
 
