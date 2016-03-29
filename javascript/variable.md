@@ -61,3 +61,6 @@ function foo() {
 foo();
 // 5 7 9
 ```
+
+Using `let` make b available only inside if block.
+
