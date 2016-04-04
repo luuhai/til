@@ -95,7 +95,6 @@ var obj2 = {
     bar: "obj2"
 };
 
-// --------
 
 foo();              // "global"
 obj1.foo();         // "obj1"
