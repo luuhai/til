@@ -2,27 +2,27 @@
 
 * With `inject`
 
-``` ruby
-[1,2,3].inject(0) { |sum, num| sum + num }
-```
+  ``` ruby
+  [1,2,3].inject(0) { |sum, num| sum + num }
+  ```
 
-or shorter
+  or shorter
 
-``` ruby
-[1,2,3].inject(:+)
-```
+  ``` ruby
+  [1,2,3].inject(:+)
+  ```
 
-but be careful
+  but be careful
 
-``` ruby
-[].inject(:+) # => nil
-[].inject(0, :+) # => 0
-```
+  ``` ruby
+  [].inject(:+) # => nil
+  [].inject(0, :+) # => 0
+  ```
 
-* With `reduce`
-    + `reduce` is just an alias of `inject`
-    + Rubocop will give you a warning if you use `inject` instead of `reduce`
-    + map/reduce style:
+  * With `reduce`
+      + `reduce` is just an alias of `inject`
+      + Rubocop will give you a warning if you use `inject` instead of `reduce`
+      + map/reduce style:
 
         ``` ruby
         array.map(&:to_i).reduce(:+)
