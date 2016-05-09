@@ -58,7 +58,7 @@
 
     def proc_test
       p = proc { return }
-      l.call
+      p.call
       puts 'huhuhu'
     end
 
