@@ -113,3 +113,8 @@ private
   end
 end
 ```
+
+#### Links
+
+* http://www.yanted.com/2014/08/27/rails-constraints-custom-routes/
+* http://building.vts.com/blog/2015/09/08/zen-and-the-art-of-rails-routing-constraints/
