@@ -4,6 +4,7 @@
   - Functions that have explicit `return` method must be defined with explicit return type.
   - Using `return` in Scala is error-proned and should be avoided.
   - Is has no effect on anonymous functions. For example:
+
   ```scala
   def foo(x: Int): Int = {
     val anonFunc: Int => Int = { z =>
@@ -19,6 +20,7 @@
 ### Functions with empty parentheses
   - Functions that were defined with empty parentheses can be invoked with or without parentheses
   - The reverse is not true. A function that was defined without parentheses are not allowed to be invoked with them
+
   ```scala
   def hi(): String = "hi"
   def hello: String = "hello"
@@ -42,6 +44,7 @@
   - To prevent `stack overflow`, Scala compiler can optimize some recursive functions with tail-recursion so that recursive calls do not use additional stack space, but instead uses the current function's stack space.
   - Only functions whose last statement is the recursive invocation can be optimized for tail-recursion.
   - To mark a function as being intended to be optimized for tail-recursion, we can use function annotation
+
   ```scala
   @annotation.tailrec
   def power(x: Int, n: Int, t: Int = 1): Int = {
