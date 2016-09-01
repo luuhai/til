@@ -34,3 +34,17 @@
   formatEuro(3.4645)          // => €3.46
   formatEuro { 3.4645 }       // => €3.46
   ```
+* Recursive function
+  - In Scala recursive functions must be defined with explocit return type.
+  - To prevent `stack overflow`, Scala compiler can optimize some recursive functions with tail-recursion so that recursive calls do not use additional stack space, but instead uses the current function's stack space.
+  - Only functions whose last statement is the recursive invocation can be optimized for tail-recursion.
+  - To mark a function as being intended to be optimized for tail-recursion, we can use function annotation
+  ```scala
+  @annotation.tailrec
+  def power(x: Int, n: Int, t: Int = 1): Int = {
+    if (n < 1) t
+    else power(x, n-1, x*t)
+  }
+
+  power(2, 8) // => Int = 256
+  ```
