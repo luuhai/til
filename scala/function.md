@@ -30,6 +30,7 @@
 
 ### Function invocation with Expression blocks
   - When invoking functions using a single parameter, you can choose to use an expression block surrounded with curly braces to send the parameter instead of surrounding the value with parentheses. The expression block will be evaluated before the function is called and the block's return value will be used as the function argument.
+
   ```scala
   def formatEuro(amt: Double) = f"€$amt%.2f"
   formatEuro(3.4645)          // => €3.46
@@ -53,6 +54,7 @@
 
 ### Type parameters
   - In Scala you can pass type parameters, which dictate the types used for the value parameters or the return value
+
   ```scala
   def identity[A](a: A): A = a
   val s: String = identity[String]("Hello") // s: String = Hello
