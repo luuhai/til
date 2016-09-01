@@ -1,6 +1,6 @@
-### Function
+## Function
 
-* `return`
+### `return`
   - Functions that have explicit `return` method must be defined with explicit return type.
   - Using `return` in Scala is error-proned and should be avoided.
   - Is has no effect on anonymous functions. For example:
@@ -16,7 +16,7 @@
   }
   ```
 
-* Functions with empty parentheses
+### Functions with empty parentheses
   - Functions that were defined with empty parentheses can be invoked with or without parentheses
   - The reverse is not true. A function that was defined without parentheses are not allowed to be invoked with them
   ```scala
@@ -27,14 +27,14 @@
   hello   // => String = hello
   hello() // => error: not enough arguments for method apply: (index: Int)Char in class StringOps.
   ```
-* Function invocation with Expression blocks
+### Function invocation with Expression blocks
   - When invoking functions using a single parameter, you can choose to use an expression block surrounded with curly braces to send the parameter instead of surrounding the value with parentheses. The expression block will be evaluated before the function is called and the block's return value will be used as the function argument.
   ```scala
   def formatEuro(amt: Double) f"€$amt%.2f"
   formatEuro(3.4645)          // => €3.46
   formatEuro { 3.4645 }       // => €3.46
   ```
-* Recursive function
+### Recursive function
   - In Scala recursive functions must be defined with explocit return type.
   - To prevent `stack overflow`, Scala compiler can optimize some recursive functions with tail-recursion so that recursive calls do not use additional stack space, but instead uses the current function's stack space.
   - Only functions whose last statement is the recursive invocation can be optimized for tail-recursion.
