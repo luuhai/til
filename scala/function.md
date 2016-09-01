@@ -27,6 +27,7 @@
   hello   // => String = hello
   hello() // => error: not enough arguments for method apply: (index: Int)Char in class StringOps.
   ```
+
 ### Function invocation with Expression blocks
   - When invoking functions using a single parameter, you can choose to use an expression block surrounded with curly braces to send the parameter instead of surrounding the value with parentheses. The expression block will be evaluated before the function is called and the block's return value will be used as the function argument.
   ```scala
@@ -34,6 +35,7 @@
   formatEuro(3.4645)          // => €3.46
   formatEuro { 3.4645 }       // => €3.46
   ```
+
 ### Recursive function
   - In Scala recursive functions must be defined with explocit return type.
   - To prevent `stack overflow`, Scala compiler can optimize some recursive functions with tail-recursion so that recursive calls do not use additional stack space, but instead uses the current function's stack space.
@@ -48,6 +50,7 @@
 
   power(2, 8) // => Int = 256
   ```
+
 ### Type parameters
   - In Scala you can pass type parameters, which dictate the types used for the value parameters or the return value
   ```scala
