@@ -48,3 +48,14 @@
 
   power(2, 8) // => Int = 256
   ```
+### Type parameters
+  - In Scala you can pass type parameters, which dictate the types used for the value parameters or the return value
+  ```scala
+  def identity[A](a: A): A = a
+  val s: String = identity[String]("Hello") // s: String = Hello
+  val d: Double = identity[Double](2.717)   // d: Double = 2.717
+  // It wasn't really necessary to pass the type parameter to the "identity" method because
+  // the compiler could have inferred this from either the String literal we passed it or
+  // the String value to which we assigned the function's return value
+  val s: String = identity("Hello") // => s: String = Hello
+  ```
