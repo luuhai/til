@@ -32,7 +32,7 @@
 
     ```scala
     val pets = List("dog", "cat", "frog")
-    Seq(1,2,3) collection pets // => List("cat", "frog")
+    Seq(1,2,3) collect pets // => List("cat", "frog")
     ```
 
 * `PartialFunction` trait provides `lift` method that returns a normal value that doesn't crash
